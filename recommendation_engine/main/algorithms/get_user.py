@@ -11,7 +11,7 @@ def __main__():
     client=MongoClient("mongodb+srv://root:1234@cluster0.2eufj.mongodb.net/?retryWrites=true&w=majority")
     db=client["test"]
     result=list(db.users.find( { "username": username } ))
-    result=[without_keys(result[0],["_id","password","isAdmin","updatedAt","createdAt","__v"])]
+    result=[without_keys(result[0],["_id","isAdmin","updatedAt","createdAt","__v"])]
     print(result)
     return result
 
