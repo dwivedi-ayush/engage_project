@@ -1,27 +1,31 @@
+// client side js for login page
+
 let name = document.querySelector(".login-name");
 let password = document.querySelector(".login-password");
 let sbutton = document.querySelector(".loginButton");
-console.log("hello");
-version=1
+version=1 // for versioning (scope of improvement)
 sbutton.addEventListener("click",(event)=>{
-    event.preventDefault();
-    // fetch('http://localhost:3000/public/usernames.json')
+    event.preventDefault(); // prevents the page from refreshing
     console.log(name.value);
     try{
+        // calls the server for user details
     fetch("/name/"+name.value+"/"+version)
     .then(function(response){
-        // return response.json();
         return response.text();
+        
     })
     .then(function(data){
+
+        // truns the string data into json
         data=JSON.parse(data.replaceAll(`'`,`"`));
-        console.log(data);
+        
+        //extracts password from the data received
         var new_password=data[0].password;
         data=data[0].username;
         
-        console.log(data);
         let flag = 0;
-    
+        
+        //if the password matches we change the page or else it refreshes and nothing happens
         if(data===name.value && new_password===password.value){
             console.log("hello");
             flag=1;
@@ -29,18 +33,23 @@ sbutton.addEventListener("click",(event)=>{
         }
     
         if(flag==1){
-            console.log("1");
+            // we store the name in the local storage for use in the next page
             localStorage.setItem("userName",name.value);
-            console.log("2");
+            // replace the current page with the next one
             window.location.replace("index");
-            console.log("3");
+            
         }
         else{
+            // is user auth fails we land here
             console.log("user correct username or password");
+            location.reload();
 
         }
     })  
     }catch{
+        // if the try fails in the case of username being wrong it lands here
+        
         console.log("user correct username or password");
+        location.reload();
     }
 }); 
