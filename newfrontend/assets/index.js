@@ -7,8 +7,9 @@ var main = document.querySelector(".main");
 var genres = ["recommended"]
 var recommended = [];
 var name = localStorage.getItem('userName');
-// console.log("hello",name);
-fetch("./name/"+name)
+console.log("hello",name);
+version=1;
+fetch("/name/"+name+"/"+version)
 .then(function(resp){
     return resp.text();
 })
@@ -46,7 +47,7 @@ fetch("./name/"+name)
     for (var i = 0; i < cards_diff_array.length; i++) {
         arr.push(cards_diff_array[i]);
     }
-    fetch("./getMovies")
+    fetch("/getMovies/"+version)
         .then(function(resp){
             return resp.text();
         })
@@ -98,127 +99,3 @@ fetch("./name/"+name)
 
 
 
-
-// fetch("./userData.json")
-//     .then(function(resp){
-//         return resp.json()
-//     })
-//     .then(function(data){
-        
-//         data.map((person)=>{
-//             if(person.username == name){
-//                 var toget = person.topGenre.slice(0,5);
-//                 toget.map((item)=>{
-//                     genres.push(item);
-//                 });
-//                 recommended = person.recommendedMovies;
-//             }
-//         })
-//         genres.map((item,index)=>{
-//             main.innerHTML = main.innerHTML + '<div class='+item+'><h1>'+item+'</h1><div class="cards_'+item+' con"></div></div>';
-//         }); 
-        
-//         var cards_diff_array = document.querySelectorAll(".con");
-        
-//         var arr = [];
-//         for (var i = 0; i < cards_diff_array.length; i++) {
-//           arr.push(cards_diff_array[i]);
-//         }
-        
-//         fetch("./movies.json")
-//             .then(function(resp){
-//                 return resp.json()
-//             })
-//             .then(function(data){
-//                 data.map((person)=>{
-//                     if(person.username == name){
-//                         var toget = person.topGenre.slice(0,5);
-//                         toget.map((item)=>{
-//                             genres.push(item);
-//                         });
-//                         recommended = person.recommendedMovies;
-//                     }
-//                 })
-//                 genres.map((item,index)=>{
-//                     main.innerHTML = main.innerHTML + '<div class='+item+'><h1>'+item+'</h1><div class="cards_'+item+' con"></div></div>';
-//                 }); 
-//                 var cards_diff_array = document.querySelectorAll(".con");
-//                 var arr = [];
-//                 for (var i = 0; i < cards_diff_array.length; i++) {
-//                   arr.push(cards_diff_array[i]);
-//                 }
-//                 fetch("./movies.json")
-//                     .then(function(resp){
-//                         return resp.json()
-//                     })
-//                     .then(function(data){
-//                         var cards_recommended=document.querySelector(".cards_recommended");
-//                         recommended.map((rec)=>{
-//                             data.map((movie)=>{
-//                                 if(movie.title == rec){
-//                                     cards_recommended.innerHTML = cards_recommended.innerHTML + '<a href='+movie.href+'><div class="card"><img src='+movie.src+' alt="icon"><p class="h1">'+movie.title+'</p><p class="h2">'+movie.genre_ids+'</p></div></a>';
-//                                 }
-//                             })
-//                         })
-//                         arr.map((item,index)=>{
-//                             data.map((movie)=>{
-//                                 movie.genre_ids.map((genre)=>{
-//                                     if(item.classList[0]=="cards_"+genre){
-//                                         item.innerHTML = item.innerHTML + '<a href='+movie.href+'><div class="card"><img src='+movie.src+' alt="icon"><p class="h1">'+movie.title+'</p><p class="h2">'+movie.genre_ids+'</p></div></a>';
-//                                     }
-//                                 })
-//                             })
-//                         })
-//                         var cards = document.querySelectorAll(".con");
-//                         cards.forEach((card)=>{
-//                             card.addEventListener("click",(event)=>{
-//                                 event.preventDefault();
-//                                 console.log(event.target.querySelectorAll("p")[0].innerHTML);
-//                                 localStorage.setItem("movie",event.target.querySelectorAll("p")[0].innerHTML);
-//                             })
-//                         })
-//                     })
-    
-              
-//             })
-// })
-
-
-
-
-
-// const{spawn}=require('child_process');
-// const childProcess=spawn('python',['../recommendation_engine/main/algorithms/server.py',name]);
-// childProcess.stdout.on('data',(data)=>{
-//     data1=data.toString();
-// });
-
-// const { once } = require('events');
-
-// async function searchForRelevantDoc (name) {
-//     // var msg = context.activity.text;
-//     var spawn = require('child_process').spawn,
-//         py= spawn('python', ['../recommendation_engine/main/algorithms/send_top_genre.py', name]),
-//         output = '';
-
-//     py.stdin.setEncoding = 'utf-8';
-
-//     py.stdout.on('data', (data) => {
-//         output += data.toString();
-//         console.log('output was generated: ' + output);
-//     });
-//     // Handle error output
-//     py.stderr.on('data', (data) => {
-//     // As said before, convert the Uint8Array to a readable string.
-//         console.log('error:' + data);
-//     });
-//     py.stdout.on('end', async function(code){
-//         console.log('output: ' + output);
-//         console.log(`Exit code is: ${code}`);
-//     });
-
-//     await once(py, 'close')
-
-//     return output;
-// }
-// searchForRelevantDoc(name);
