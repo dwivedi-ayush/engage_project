@@ -17,9 +17,13 @@ def predict_using_sklearn_surprise(top_10_list,all_people_top_10,verbose=True):
     item=[]
     user=[]
     rating=[]
-    user_name=1
+    user_name=0
+    user.append(user_name)
+    item.append(top_10_list[0])
+    rating.append(10)
     for i in all_people_top_10:
         count=0
+        user_name+=1  
         for j in i:
             if(j not in unique_genres):
                 unique_genres.append(j)
@@ -27,7 +31,7 @@ def predict_using_sklearn_surprise(top_10_list,all_people_top_10,verbose=True):
             user.append(user_name)
             rating.append(10-count)
             count+=1
-        user_name+=1   
+        
 
     # each person's cast/genre_list is sorted hence the first element has the highest
     # priority hance it is easy to provide the rating for each element
@@ -54,7 +58,7 @@ def predict_using_sklearn_surprise(top_10_list,all_people_top_10,verbose=True):
     a=algo.fit(trainingSet)
     prediction_score=[]
     for i in unique_genres:
-        prediction_score.append(algo.predict('', i).est)
+        prediction_score.append(algo.predict(0, i).est)
     score,recommended_genre=sort_with_index_preserved(prediction_score,unique_genres)
     new_genre_list=[]
     count=0
@@ -63,7 +67,7 @@ def predict_using_sklearn_surprise(top_10_list,all_people_top_10,verbose=True):
             break
         if(i not in top_10_list[:5]):
             new_genre_list.append(i)
-        count+=1    
+            count+=1    
     if(verbose):    
         print("top item recommended (library): ",new_genre_list)     
     return new_genre_list
