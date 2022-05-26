@@ -19,18 +19,29 @@ app.get("/callPythonUpdate/:name/:movie",function(req,res,next){
     console.log(data.toString());
 });
 })
+
+function callServer(name) {
+    const{spawn}=   require('child_process');
+    const childProcess=spawn('python',['../recommendation_engine/main/algorithms/server.py',name]);
+    childProcess.stdout.on('data',(data)=>{
+        console.log("python responed",data.toString());});
+  }
+
+
+
 app.get("/name/:name",function(req,res,next){
+    callServer(req.params.name);
     // console.log("name server got",req.params.name);
     const{spawn}=   require('child_process');
     // var sendName=localStorage.getItem('userName');
     const childProcess=spawn('python',['../recommendation_engine/main/algorithms/get_user.py',req.params.name]);
     childProcess.stdout.on('data',(data)=>{
     res.send(data);
-    // console.log("1",req.params.name);
-    const childProcess=spawn('python',['../recommendation_engine/main/algorithms/server.py',req.params.name]);
-    // console.log("!",req.params.name);
+    console.log("1",req.params.name);
+    console.log("!",req.params.name);
     
 });
+
 })
 app.get("/getMovies",function(req,res,next){
     // console.log("name server got",req.params.name);

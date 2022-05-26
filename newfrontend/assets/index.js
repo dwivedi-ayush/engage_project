@@ -14,6 +14,7 @@ fetch("./name/"+name)
 })
 .then(function(data){
     // console.log(data);
+    console.log(data)
     json_data=JSON.parse(data.replaceAll(`'`,`"`));
     genres.push(json_data[0].topGenre);
     // console.log(genres);
