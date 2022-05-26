@@ -22,7 +22,7 @@ def __main__():
     
     genre_score=[]
     for genre in person_genre:
-        genre_score.append(10-person_genre.index(genre))
+        genre_score.append(len(person_genre)-person_genre.index(genre))
     for genre in movie_genre:
         try:
             idx=person_genre.index(genre)
@@ -38,7 +38,7 @@ def __main__():
     
     cast_score=[]
     for cast in person_cast:
-        cast_score.append(10-person_cast.index(cast))
+        cast_score.append(len(person_cast)-person_cast.index(cast))
     for cast in movie_cast:
         try:
             idx=person_cast.index(cast)
@@ -50,7 +50,7 @@ def __main__():
     # print("cast",person_cast)
     # print("cast_score",cast_score)
 
-    db.users.update_one({"username":username},{"$set":{"topCast":cast[:10]}})
+    db.users.update_one({"username":username},{"$set":{"topCast":cast}})
 
 
     
