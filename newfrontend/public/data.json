@@ -1,0 +1,65 @@
+[
+    {
+        "type" : "action",
+        "href": "https://adgvit.com/",
+        "src": "./images/Vector.svg",
+        "p1": "Website",
+        "p2": "Apple Developer’s Group Website"
+    },
+    {
+        "type" : "rommance",
+        "href": "https://www.linkedin.com/company/adgvit/",
+        "src": "fa-linkedin-in",
+        "p1": "LinkedIn",
+        "p2": "Apple Developer’s Group on LinkedIn"
+    },
+    {
+        "type" : "rommance",
+        "href": "https://twitter.com/adgvit",
+        "src": "fa-twitter",
+        "p1": "Twitter",
+        "p2": "Apple Developer’s Group on Twitter"
+    },
+    {
+        "type" : "rommance",
+        "href": "https://www.instagram.com/adgvit/",
+        "src": "fa-instagram",
+        "p1": "Instagram",
+        "p2": "Apple Developer’s Group on Instagram"
+    },
+    {
+        "type" : "action",
+        "href": "https://www.facebook.com/vitios/",
+        "src": "fa-facebook",
+        "p1": "Facebook",
+        "p2": "Apple Developer’s Group on Facebook"
+    },
+    {
+        "type" : "recommended",
+        "href": "medium.html",
+        "src": "fa-medium",
+        "p1": "Medium",
+        "p2": "Apple Developer’s Group on Medium"
+    },
+    {
+        "type" : "recommended",
+        "href": "https://github.com/ADG-VIT",
+        "src": "fa-github",
+        "p1": "Github",
+        "p2": "Apple Developer’s Group on Github"
+    },
+    {
+        "type" : "recommended",
+        "href": "https://www.youtube.com/channel/UCM-gndho1tSjxzKeCd0MnRQ",
+        "src": "fa-youtube",
+        "p1": "Youtube",
+        "p2": "Apple Developer’s Group on YouTube"
+    },
+    {
+        "type" : "action",
+        "href": "https://adgvit.com/projects",
+        "src": "./images/coolicon.svg",
+        "p1": "Apps",
+        "p2": "Apps By Apple Developer’s Group"
+    }
+]

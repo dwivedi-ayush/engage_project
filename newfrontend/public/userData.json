@@ -1,0 +1,15 @@
+[
+    {"_id":{"$oid":"628cdb807841396bd8be0c14"},
+    "username":"anirudh",
+    "password":"U2FsdGVkX18Qm+JoniTrNkQtVviKdClF88l99SZyJC8=",
+    "email":"anirudh@gmail.com",
+    "profilePic":"",
+    "isAdmin":false,
+    "topGenre":["fantasy","drama","sci-fi","fiction","documentary","thriller","spy","romance","mystery","comedy"],
+    "topCast":["rdj","Johnny Deep","Andrew Garfield","Sebastian stan","Chris evans"],
+    "languages":["english"],
+    "excludedTags":[],
+    "recommendedMovies":["Firestarter", "Spider-Man: No Way Home", "Sonic the Hedgehog 2", "Halo", "Everything Everywhere All at Once", "Ambulance", "Morbius", "Doctor Strange in the Multiverse of Madness", "Senior Year", "The Lost City", "The Batman", "The Northman", "365 Days: This Day", "Fantastic Beasts: The Secrets of Dumbledore", "The Bad Guys", "Operation Mincemeat", "Uncharted", "Moon Knight", "Moonfall", "Star Trek: Strange New Worlds"],
+    "weatherMovies":[]
+    }
+]
