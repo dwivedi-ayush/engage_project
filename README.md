@@ -2,7 +2,54 @@
 # Microsoft Engage 2022
 
 
+> ## How to run the project
+> \
+> Note: the project was developed and tested in macOS
+>
+> Compilers and package managers required:\
+> \
+> Python version : 3.8.3\
+> \
+> Node version : v16.13.0\
+> \
+> pip version : 21.2.4\
+> \
+> Npm version : 8.1.0
+>
+> A system with multithreading support (in python multithreading is used)
+> is needed.
+>
+> First install all the required python packages globally.
+>
+> For this use requirements.txt provided inside recommendation_engine
+> folder\
+> Use the command 
+``` pip install -r requirements.txt ```
+> \
+> After that in terminal run the command ``` pip install 'pymongo[srv]' ```
+>
+> Then come inside newfrontend folder and type the command ``` npm i ``` or
+> ``` npm install ```
+> \
+> This will install the required packages for node\
+> \
+> Then in the newfrontend folder only type the command ``` npx nodemon
+> server.js ``` or ``` nodemon server.js ```.
+>
+> Then go to a browser and search for "localhost:3000" the login page
+> should appear and then using the username-password json provided login
+> to the page and if a user is logged in for the ﬁrst time their
+> recommended list will be empty so refresh the page to get the movies
+> in recommended movie row if that is the case.
+>
+> Note: if the page doesn't render after login wait for a few seconds
+> because if everything is loading for the ﬁrst time it would be slower.
+> Same goes foe home page if its blank wait for a few second to fetch
+> the data from the database.
+>
 
+
+>
 > ## Basics of the algorithm
 >
 > The algorithm is written in python because in python there are
@@ -258,50 +305,6 @@ recommendation engine.
 > would have to send very big command line arguments and handling them
 > would be diﬃcult.
 >
-> ## How to run the project\
-> \
-> Note: the project was developed and tested in macOS
->
-> Compilers and package managers required:\
-> \
-> Python version : 3.8.3\
-> \
-> Node version : v16.13.0\
-> \
-> pip version : 21.2.4\
-> \
-> Npm version : 8.1.0
->
-> A system with multithreading support (in python multithreading is used)
-> is needed.
->
-> First install all the required python packages globally.
->
-> For this use requirements.txt provided inside recommendation_engine
-> folder\
-> Use the command 
-``` pip install -r requirements.txt ```
-> \
-> After that in terminal run the command ``` pip install 'pymongo[srv]' ```
->
-> Then come inside newfrontend folder and type the command ``` npm i ``` or
-> ``` npm install ```
-> \
-> This will install the required packages for node\
-> \
-> Then in the newfrontend folder only type the command ``` npx nodemon
-> server.js ``` or ``` nodemon server.js ```.
->
-> Then go to a browser and search for "localhost:3000" the login page
-> should appear and then using the username-password json provided login
-> to the page and if a user is logged in for the ﬁrst time their
-> recommended list will be empty so refresh the page to get the movies
-> in recommended movie row if that is the case.
->
-> Note: if the page doesn't render after login wait for a few seconds
-> because if everything is loading for the ﬁrst time it would be slower.
-> Same goes foe home page if its blank wait for a few second to fetch
-> the data from the database.
 >
 > ## Scope of improvement and project's future
 >
