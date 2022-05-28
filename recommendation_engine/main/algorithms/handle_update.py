@@ -28,7 +28,7 @@ def __main__():
             idx=person_genre.index(genre)
             genre_score[idx]=genre_score[idx]+3 
         except:
-            genre_score.append(2) #keeping track of the recently watched movies
+            genre_score.append(3) #keeping track of the recently watched movies
             person_genre.append(genre)
     genre_score,genre=sort_with_index_preserved(genre_score,person_genre)        
     # print("genre",person_genre)
@@ -44,13 +44,13 @@ def __main__():
             idx=person_cast.index(cast)
             cast_score[idx]=cast_score[idx]+3 
         except:
-            cast_score.append(2) #keeping track of the recently watched movies
+            cast_score.append(3) #keeping track of the recently watched movies
             person_cast.append(cast)
     cast_score,cast=sort_with_index_preserved(cast_score,person_cast)        
     # print("cast",person_cast)
     # print("cast_score",cast_score)
 
-    db.users.update_one({"username":username},{"$set":{"topCast":cast}})
+    db.users.update_one({"username":username},{"$set":{"topCast":cast[:5]}})
 
 
     
