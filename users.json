@@ -1,0 +1,55 @@
+[
+    {
+        "username": "ayush",
+        "password": "1234"
+    },
+    {
+        "username": "arnish",
+        "password": "1234"
+    },
+    {
+        "username": "akshat",
+        "password": "1234"
+    },
+    {
+        "username": "anirudh",
+        "password": "1234"
+    },
+    {
+        "username": "rajarshi",
+        "password": "1234"
+    },
+    {
+        "username": "vinay",
+        "password": "1234"
+    },
+    {
+        "username":"shambhavi",
+        "password":"1234"
+    },
+    {
+        "username":"meghana",
+        "password":"1234"
+    },
+    {
+        "username":"panda",
+        "password":"1234"
+    },
+    {
+        "username":"vansh",
+        "password":"1234"
+    },
+    {
+        "username":"ananyaa",
+        "password":"1234"
+    },
+    {
+        "username":"om",
+        "password":"1234"
+    },
+    {
+        "username":"yash",
+        "password":"1234"
+    }
+    
+]
