@@ -47,7 +47,7 @@
 > Same goes foe home page if its blank wait for a few second to fetch
 > the data from the database.
 >
-
+> To login as different users see ```users.json``` file given and take pre registered users from there because there is no way of registering a > new user for now
 
 >
 > ## Basics of the algorithm
