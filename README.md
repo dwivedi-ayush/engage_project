@@ -121,13 +121,19 @@
 > algorithms for it one is custom made algorithm hence named custom_algo.py and other is algo_2.py.
 > Each algorithm is run in their own thread hence saving time then using ensemble method we combine the results of each algorithm and returns > the newly recommended genre/cast.
 > Lets talk about both of the algorithms here only
-> custom_algo.py: steps in the algorithm are:   1. find similar users: this is done by taking our top 5 list and compare it with their top 10 
-> list and the person whose matching with our list is higher gets higher preference in the next step    2. get their top genre that is not in our 
+> custom_algo.py: steps in the algorithm are:   
+> 1. find similar users: this is done by taking our top 5 list and compare it with their top 10 
+> list and the person whose matching with our list is higher gets higher preference in the next step    
+> 2. get their top genre that is not in our 
 > top genre: 5 highest ranking genre that is in their list but not in our top 5 list is then added to a list and given a score based on the  
-> persons priority from the previous step    3. score the genre based on number of occurrences: the scores are added for each person we go 
-> through    4. sort them: we sort them based on the scores    5. return the new genres: and take the top n items 
+> persons priority from the previous step    
+> 3. score the genre based on number of occurrences: the scores are added for each person we go 
+> through    
+> 4. sort them: we sort them based on the scores    
+> 5. return the new genres: and take the top n items 
 > algo_2.py
->        We use KNN with means from sklearn surprise (we could also have used SVD and NMF algorithms form sklearn surprise but due to less > computing time and manageable RMSE we opted for KNN).
+>        We use KNN with means from sklearn surprise (we could also have used SVD and NMF algorithms form sklearn surprise but due to less computing 
+>        time and manageable RMSE we opted for KNN).
 > First we give each genre a score according to their order in the list for each user then we try to predict the rating for each unique genre > for our user and then sort it and return the top n required.
 
 ![image4](https://user-images.githubusercontent.com/79781363/170731909-1bdb1479-8190-4588-83ff-423a6cc4dc25.png)
