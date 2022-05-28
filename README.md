@@ -175,7 +175,7 @@
 > using KNN and in that that row is just one voting condition so it doesn’t matter much and also 1 is totally different.
 > Algo 1 is made from scratch because it provides more flexibility to tailor make recommended movie list for the user to throw into the ensemble > engine to get considered.
 
-![image5](https://user-images.githubusercontent.com/79781363/170732095-761197ba-64f7-4db5-b6b8-d9537aa515c5.png)
+<img width="761" alt="Screenshot 2022-05-28 at 4 39 32 PM" src="https://user-images.githubusercontent.com/79781363/170822965-377bb3ff-b14a-45f6-857c-b156c39977fe.png">
 
 
 Here the top list is the new improved version
@@ -216,6 +216,7 @@ Here the top list is the new improved version
 ![image6](https://user-images.githubusercontent.com/79781363/170732279-179c35bf-2d84-4355-9efb-b7c5a01a5ca4.png)
 
 
+
 > Apart form these main ﬁles there are few extra ones like sort.py ,
 > unique_scored.py, ensemble_result.py these are mostly utility ﬁles
 > used for sorting, combining matrices into a list ,etc . They are made
@@ -226,7 +227,12 @@ Here the top list is the new improved version
 Given below is the full overview of the architecture of the
 recommendation engine.
 
-![image7](https://user-images.githubusercontent.com/79781363/170732309-4994baa7-28f2-4f27-a0f7-a99c65e281a9.png)
+
+![updated](https://user-images.githubusercontent.com/79781363/170822936-10442f42-17a3-4acc-9ab3-80c17af32671.jpg)
+
+![algorithms](https://user-images.githubusercontent.com/79781363/170822844-4829dcb3-5a0a-462a-8a0f-1b19e5d2a4e7.jpg)
+
+
 
 > ## Working of the server and frontend
 >
