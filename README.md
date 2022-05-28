@@ -33,7 +33,7 @@
 > \
 > This will install the required packages for node\
 > \
-> Then in the newfrontend folder only type the command ``` npx nodemon
+> Then in the newfrontend folder only type the command```node server.js``` or ``` npx nodemon
 > server.js ``` or ``` nodemon server.js ```.
 >
 > Then go to a browser and search for "localhost:3000" the login page
