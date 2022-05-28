@@ -166,7 +166,7 @@
 > for sklaern-surpise library we map the top genre from the closest
 > users to each movie and score those movies based on a single genre,
 > each genre has a priority score and while scoring a movie it is taken
-> into consideration. So the mapping is genre-moviescore and then we use
+> into consideration. So the mapping is genre-movie-score and then we use
 > the genre from out user and predict the movie scores and then sort and
 > return.
 
